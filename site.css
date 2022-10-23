@@ -1,0 +1,37 @@
+/*
+============================================
+; Title: Assignment 1.3 Environment Setup
+; Author: Professor Krasso
+; Date: 23 October 2022
+; Modified by: Scott Whittemore
+; Description: css for Landing page for 
+; WEB 231, contains all assignments.
+;===========================================
+*/
+
+body {
+    margin: 0;
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+h1, h2, h3, h4 {
+    background-color: #3C275A;
+    color: white;
+    border: 1px solid #d6a800;
+    padding: 10px;
+}
+a {
+    color: #453674;
+    text-decoration: none;
+}
+a:hover {
+    background-color: #D6A800;
+    color: #4F3674;
+}
+a:visited {
+    color: #3C275A;
+}
