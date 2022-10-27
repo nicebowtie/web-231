@@ -1,0 +1,22 @@
+/*
+============================================
+; Title: Exercise 2.2 Hello JavaScript
+; Author: Scott Whittemore
+; Date: 27 October 2022
+; Modified by: Scott Whittemore
+; Description: css for assignments in 
+;Web-231
+;===========================================
+*/
+
+/* All styles for link returning user to assignment page*/
+.return-home {
+    color: #4F3674;
+    text-decoration: none;
+}
+a:hover {
+    color: #4F3674;
+}
+a:visited {
+    color: #3C275A;
+}
