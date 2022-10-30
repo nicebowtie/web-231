@@ -13,17 +13,21 @@
     <title>WEB 231 - Enterprise JavaScript I</title>
     <link href="../site.css" type="text/css" rel="stylesheet">
     <link href="../week-2/Whittemore-payroll.css" type="text/css" rel="stylesheet">
+    <link href="../global.css" type="text/css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+<!--This is a container with payroll information regarding 3 separate employees.-->
 <div id="container">
 
 <h1 id="payroll-header">Payroll System</h1>
 
+<!--This is information for employee 1.-->
 <h3>Employee record 1</h3>
-
 <ul>
     <li id="txtFirstNameMiyamoto"></li>
     <li id="txtLastNameMiyamoto"></li>
@@ -32,6 +36,7 @@
     <li id="txtPayRateMiyamoto"></li>
 </ul>
 
+<!--This is information for employee 2.-->
 <h3>Employee record 2</h3>
 <ul>
     <li id="txtFirstNameTomoe"></li>
@@ -40,6 +45,7 @@
     <li id="txtHireDateTomoe"></li>
     <li id="txtPayRateTomoe"></li>
 </ul>
+<!--This is information for employee 3.-->
 <h3>Employee record 3</h3>
 <ul>
     <li id="txtFirstNameZato"></li>
@@ -48,45 +54,51 @@
     <li id="txtHireDateZato"></li>
     <li id="txtPayRateZato"></li>
 </ul>
+
+<!--THis is a return button back to the landing page.-->
 <a href="../index.html" class="return-home">Return</a>
 </div>
+
+
 <script>
 
+// These are variable declarations for each employee.
     const txtFirstNameEmployeeA = "Miyamoto";
     const txtLastNameEmployeeA = "Usagi";
     const txtAddressEmployeeA = "231 Sakai Circle";
-    const txtHireDateEmployeeA = new Date().toLocaleDateString(“en-US”);
+    const txtHireDateEmployeeA = new Date().toLocaleDateString("en-US");
     const txtPayRateEmployeeA = 38.50.toFixed(1);
 
     const txtFirstNameEmployeeB = "Tomoe";
     const txtLastNameEmployeeB = "Amoe";
     const txtAddressEmployeeB = "12 Prefecture Rd";
-    const txtHireDateEmployeeB = new Date().toLocaleDateString(“en-US”);
+    const txtHireDateEmployeeB = new Date().toLocaleDateString("en-US");
     const txtPayRateEmployeeB = 28.88.toFixed(1);
 
     const txtFirstNameEmployeeC = "Zato";
     const txtLastNameEmployeeC = "Ino";
     const txtAddressEmployeeC = "200 Ronin Rd";
-    const txtHireDateEmployeeC = new Date().toLocaleDateString(“en-US”);
+    const txtHireDateEmployeeC = new Date().toLocaleDateString("en-US");
     const txtPayRateEmployeeC = 12.50.toFixed(1);
 
+    // These are the variable assignments for each employee.
     document.getElementById("txtFirstNameMiyamoto").innerHTML = txtFirstNameEmployeeA;
-    document.getElementById(“txtLastNameMiyamoto").innerHTML = txtLastNameEmployeeA;
-    document.getElementById(“txtAddressMiyamoto”).innerHTML = txtAddressEmployeeA;
-    document.getElementById(“txtHireDateMiyamoto”).innerHTML = txtHireDateEmployeeA;
-    document.getElementById(“txtPayRateMiyamoto”).innerHTML = txtPayRateEmployeeA;
+    document.getElementById("txtLastNameMiyamoto").innerHTML = txtLastNameEmployeeA;
+    document.getElementById("txtAddressMiyamoto").innerHTML = txtAddressEmployeeA;
+    document.getElementById("txtHireDateMiyamoto").innerHTML = txtHireDateEmployeeA;
+    document.getElementById("txtPayRateMiyamoto").innerHTML = txtPayRateEmployeeA;
 
-    document.getElementById(“txtFirstNameTomoe”).innerHTML = txtFirstNameEmployeeB;
-    document.getElementById(“txtLastNameTomoe”).innerHTML = txtLastNameEmployeeB;
-    document.getElementById(“txtAddressTomoe”).innerHTML = txtAddressEmployeeB;
-    document.getElementById(“txtHireDateTomoe”).innerHTML = txtHireDateEmployeeB;
-    document.getElementById(“txtPayRateTomoe”).innerHTML = txtPayRateEmployeeB;
+    document.getElementById("txtFirstNameTomoe").innerHTML = txtFirstNameEmployeeB;
+    document.getElementById("txtLastNameTomoe").innerHTML = txtLastNameEmployeeB;
+    document.getElementById("txtAddressTomoe").innerHTML = txtAddressEmployeeB;
+    document.getElementById("txtHireDateTomoe").innerHTML = txtHireDateEmployeeB;
+    document.getElementById("txtPayRateTomoe").innerHTML = txtPayRateEmployeeB;
 
-    document.getElementById(“txtFirstNameZato”).innerHTML = txtFirstNameEmployeeC;
-    document.getElementById(“txtLastNameZato”).innerHTML = txtLastNameEmployeeC;
-    document.getElementById(“txtAddressZato”).innerHTML = txtAddressEmployeeC;
-    document.getElementById(“txtHireDateZato”).innerHTML = txtHireDateEmployeeC;
-    document.getElementById(“txtPayRateZato”).innerHTML = txtPayRateEmployeeC;
+    document.getElementById("txtFirstNameZato").innerHTML = txtFirstNameEmployeeC;
+    document.getElementById("txtLastNameZato").innerHTML = txtLastNameEmployeeC;
+    document.getElementById("txtAddressZato").innerHTML = txtAddressEmployeeC;
+    document.getElementById("txtHireDateZato").innerHTML = txtHireDateEmployeeC;
+    document.getElementById("txtPayRateZato").innerHTML = txtPayRateEmployeeC;
     
 </script>
 </body>
