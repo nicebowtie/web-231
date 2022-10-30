@@ -35,3 +35,8 @@ a:hover {
 a:visited {
     color: #3C275A;
 }
+
+/* Added dotted border for ul week-2*/
+ul {
+border: 1px dotted red;
+}
