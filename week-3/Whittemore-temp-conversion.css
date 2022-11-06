@@ -1,0 +1,38 @@
+/*
+============================================
+; Title: Exercise Assignment 3.2 - Temperature Conversion App
+; Author: Scott Whittemore
+; Date: 3 November 2022
+; Modified by: Scott Whittemore
+; Description: additonal css for assignment 3.2
+;===========================================
+*/
+
+/*I centered the <h1> to look more like the final solution*/
+h1 {
+    text-align: center;
+}
+
+#containerA, #containerB {
+    padding: 10px;
+}
+
+#containerA, #containerB {
+    width: 600px;
+    margin: 3% auto 0;
+    
+}
+.card-content {
+    text-align: center;    
+}
+
+/* I couldn't figure out how else to move the return link*/
+.return-home {
+    margin-left: 22.25%;
+}
+.card {
+    margin: auto;
+}
+
+
+
