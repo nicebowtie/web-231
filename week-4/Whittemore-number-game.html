@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+============================================
+; Title: Assignment 4.2 Number Game
+; Author: Scott Whittemore
+; Date: 8 November 2022
+; Modified by: Scott Whittemore
+; Description: Number Game
+;===========================================
+-->
+
+<head>
+    <title>WEB 231 - Enterprise JavaScript I</title>
+    <link href="Whittemore-number-game.css" type="text/css" rel="stylesheet">
+    <link href="../global.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<!--This is the card where temperature is entered in Fahrenheit.-->
+<div id="container">
+    <h1 class="app-header">Welcome to the numbers game!</h1>    
+        <div class="card">
+            <div class="card-title">Pick a number between 1 and 10</div>
+                <div class="card-content">
+                    <div class="form">
+                        <div class="form-field">
+                            <label for="txtMyNumber">Guess the number:</label>
+                            <input type="text" id="txtMyNumber" name="txtMyNumber" class="input"></div>
+                            <div class="form-field">
+                            <button id="btnSubmit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+<!--This is the card where you find out if the number is higher or lower than your guess.-->
+    <div id="container">
+        <div class="card">
+            <div class="card-title">Results</div>
+                <div class="card-content" id="rndResults"></div>
+                </div>
+                </div>
+    
+                <a href="../index.html" class="return-home">Return</a>          
+<script>
+
+/** This is an onclick event that once clicked
+* takes a randomly generated number and compares
+* it to your guess. It will let you know if the
+* guess is higher, lower, or correct. 
+*/
+
+// Generates random number.
+const rnd = Math.floor((Math.random() * 10) + 1); 
+
+// Creates onclick event when submit is clicked.
+document.getElementById("btnSubmit").onclick = function numberGuess() { 
+
+// The function compares the number input to the randomly generated number.
+let myNumber = document.getElementById("txtMyNumber").value;
+     if (myNumber > rnd) { 
+
+// Couldn't figure out how to get the actual number to appear in the "results". 
+// After many failed trial and errors, I searched and found a solution on Megan Walker's GitHub.
+        document.getElementById("rndResults").innerHTML = "The number is less than " + myNumber;  
+    }  else if (myNumber < rnd) {
+        document.getElementById("rndResults").innerHTML = "The number is greater than " + myNumber;
+    }  else {
+        document.getElementById("rndResults").innerHTML = "Congratulations! You picked the correct number!";
+    }
+}
+
+</script>
+</body>
+</html>
