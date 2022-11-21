@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+============================================
+; Title: Assignment 5.2 Sequence Game
+; Author: Scott Whittemore
+; Date: 20 November 2022
+; Modified by: Scott Whittemore
+; Description: Sequence Game
+;===========================================
+-->
+
+<head>
+    <title>WEB 231 - Enterprise JavaScript I</title>
+    <link href="Whittemore-number-game.css" type="text/css" rel="stylesheet">
+    <link href="../global.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<!--This is the card where a sequence is selected-->
+<div id="container">
+    <h1 class="app-header">Welcome to the sequence game!</h1>    
+        <div class="card">
+            <div class="card-title">Sequence Selection Form</div>
+                <div class="card-content">
+                    <div class="form">
+                        <div class="form-field">
+                            <label for="txtMyNumber">Choose a number sequence</label>
+                            <div class="form-field">
+                                <select class ="drop-down-menu" name="sequence" id="sequence">
+                                    <option value="select">--Select--</option>
+                                    <option value="fibonacci">Fibonacci Sequence</option>
+                                    <option value="even">Even Numbers</option>
+                                    <option value="odd">Odd Numbers</option>
+                                  </select>
+                            <button onclick="myFunction()"id="btnDisplaySequence" class="btn btn-primary">Display Sequence</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--This is the card where the sequence numbers are displayed-->
+    <div id="container">
+        <div class="card">
+            <div class="card-title">Results</div>
+                <div class="card-content" id="sequenceResults"></div>
+                </div>
+                </div>
+    
+                <a href="../index.html" class="return-home">Return</a>          
+<script>
+//I'm trying to attach 
+function myFunction() {
+  document.getElementById("btnDisplaySequence").innerHTML;
+}
+let choice = document.getElementById("sequence").value;
+
+//writing code to produce a fibonacci sequence that 
+//ends before "40". Couldn't figure out how to 
+//bind the sequence to the results card.
+if (choice === fibonacci) {
+let num1 = 0;
+let num2 = 1;
+let next = num1 + num2;
+let fibonacciSequenceText = num1 + ", ";
+while (next < 40) {
+    next = num1 + num2;
+    num1 = num2;
+    num2 = next;
+    fibonacciSequenceText += num1 + ", ";
+}
+function () {
+document.getElementById("sequenceResults").value = fibonacciSequenceText; 
+fibonacciSequenceText = fibonacciSequenceText.slice(0, -2);      
+}
+
+
+
+}
+
+//produce a string of even numbers. Didn't get to finish this. 
+else if (choice === even) {
+
+let num1 = 2;
+let num2 = num1 + 2;
+let next = num1 + num2; 
+do 
+while (nu)
+
+}
+document.getElementById("fibonacciSequenceText").innerHTML = "sequenceResults";
+
+//produce a string of odd numbers. Didn't get to finish this.
+else if (sequence === odd) {
+
+}
+
+//produce a pop up box when "select" is chosen. Didn't get to finish.
+else {
+
+}
+</script>
+</body>
+</html>

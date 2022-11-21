@@ -1,0 +1,41 @@
+/*
+============================================
+; Title: Exercise Assignment 5.2 - Sequence Game
+; Author: Scott Whittemore
+; Date: 14 November 2022
+; Modified by: Scott Whittemore
+; Description: additonal css for assignment 5.2
+;===========================================
+*/
+
+/*copied .input styling from global.css for .drop-down-menu*/
+.drop-down-menu {
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+}
+
+.card-content {
+    font-size: 28px;
+    text-align: center;
+}
+/*I centered the <h1> to look more like the final solution*/
+h1 {
+    text-align: center;
+}
+#container {
+    padding: 10px;
+    width: 600px;
+    margin: 3% auto 0;   
+}
+
+/* I couldn't figure out how else to move the return link*/
+.return-home {
+    margin-left: 55px;
+}
+.card {
+    margin: auto;
+}
