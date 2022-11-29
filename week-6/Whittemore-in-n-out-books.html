@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<div lang="en">
 
 
 <!--
@@ -23,81 +23,94 @@
 
 <!--This is the card where you select which table you wish to display-->
 <div id="container">
-    <h1 class="app-header">Welcome to In-N-Out-Books</h1>    
-        <div class="card">
-            <div class="card-title">My Favorites</div>
-                <div class="card-content">
-                    <div class="form">
-                        <div class="form-field">
-                            <label for="txtMyNumber">Choose a listing:</label>
-                            <div class="form-field">
-                                <select class ="drop-down-menu" name="favoriteList" id="favoriteList">
-                                    <option value="select">--Select--</option>
-                                    <option value="books">Top 3 Favorite Books</option>
-                                    <option value="authors">Top 3 Favorite Authors</option>
-                                  </select>
-                            <button id="btnDisplayListing" class="btn btn-primary">Display Listing</button>
-                        </div>
-                    </div>
+    <h1 class="app-header">Welcome to In-N-Out-Books</h1>   
+
+    <!-- card start -->
+    <div class="card">
+        <div class="card-title">My Favorites</div>
+        <div class="card-content">
+            <div class="form">
+                <div class="form-field">
+                    <label for="txtMyNumber">Choose a listing:</label>
+                    <!-- start of select menu -->
+                    <select class ="drop-down-menu" name="favoriteList" id="favoriteList">
+                        <option value="select">--Select--</option>
+                        <option value="books">Top 3 Favorite Books</option>
+                        <option value="authors">Top 3 Favorite Authors</option>
+                    </select>
+                    <!-- end of select menu -->
                 </div>
+                <button id="btnDisplayListing" class="btn btn-primary">Display Listing</button>
+            </div>
         </div>
+        <!-- end of card content -->
     </div>
+    <!-- end of card -->
     <a href="../index.html" class="return-home">Return</a>
+</div>
+<!-- end of container -->
+
+
 
 <!--This is the card where a table of 3 favorite books is displayed-->
     <div id="container">
-        <div class="card">
+        <div class="card" id="favorite-books">
             <div class="card-title">Top 3 Favorite Books</div>
-                <div class="card-content" id="favorite-books"></div>
+                <div class="card-content">
+                    <table class="table">
+                        <tr>
+                          <th id="txtIsbn">ISBN</th>
+                          <th id="txtTitle">Title</th>
+                          <th id="txtPages">Pages</th>
+                        </tr>
+                        <tr>
+                          <td id="txtMeTalkPrettyIsbn"></td>
+                          <td id="txtMeTalkPrettyTitle"></td>
+                          <td id="txtMeTalkPrettyPages"></td>
+                        </tr>
+                        <tr>
+                            <td id="txtOutliersIsbn"></td>
+                            <td id="txtOutliersTitle"></td>
+                            <td id="txtOutliersPages"></td>
+                        </tr>
+                        <tr>
+                            <td id="txtUsagiIsbn"></td>
+                            <td id="txtUsagiTitle"></td>
+                            <td id="txtUsagiPages"></td>
+                          </tr>
+                      </table>
+                </div>
 
 <!--copied table form from w3schools-->
-                <table>
-                    <tr>
-                      <th id="txtIsbn">ISBN</th>
-                      <th id="txtTitle">Title</th>
-                      <th id="txtPages">Pages</th>
-                    </tr>
-                    <tr>
-                      <td id="txtMeTalkPrettyIsbn"></td>
-                      <td id="txtMeTalkPrettyTitle"></td>
-                      <td id="txtMeTalkPrettyPages"></td>
-                    </tr>
-                    <tr>
-                        <td id="txtOutliersIsbn"></td>
-                        <td id="txtOutliersTitle"></td>
-                        <td id="txtOutliersPages"></td>
-                    </tr>
-                    <tr>
-                        <td id="txtUsagiIsbn"></td>
-                        <td id="txtUsagiTitle"></td>
-                        <td id="txtUsagiPages"></td>
-                      </tr>
-                  </table>
+                
+            </div>
         </div>
-                </div>
+    </div>
                 
     <div id="container">
-        <div class="card">
+        <div class="card"id="favorite-authors" >
             <div class="card-title">Top 3 Favorite Authors</div>
-                <div class="card-content" id="favorite-authors"></div>
-                <table>
-                    <tr>
-                      <th>Name</th>
-                      <th>Genre</th>
-                    </tr>
-                    <tr>
-                      <td id="txtGladwellName"></td>
-                      <td id="txtGladwellGenre"></td>
-                    </tr>
-                    <tr>
-                        <td id="txtSedarisName"></td>
-                        <td id="txtSedarisGenre"></td>
-                    </tr>
-                    <tr>
-                        <td id="txtSakaiName"></td>
-                        <td id="txtSakaiGenre"></td>
-                      </tr>
-                  </table>
+                <div class="card-content" >
+                    <table class="table">
+                        <tr>
+                          <th id="txtName">Name</th>
+                          <th id="txtGenre">Genre</th>
+                        </tr>
+                        <tr>
+                          <td id="txtGladwellName"></td>
+                          <td id="txtGladwellGenre"></td>
+                        </tr>
+                        <tr>
+                            <td id="txtSedarisName"></td>
+                            <td id="txtSedarisGenre"></td>  
+                        </tr>
+                        <tr>
+                            <td id="txtSakaiName"></td>
+                            <td id="txtSakaiGenre"></td>  
+                        </tr>
+                      </table>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -122,7 +135,8 @@ let book2 = {
     isbn: 0316017930,
     title: "Outliers",
     pages: 336
-};
+}
+
 let book3 = {
     isbn: 1506724906,
     title: "Usagi Yojimbo Saga Volume 1",
@@ -153,68 +167,60 @@ books.style.display = "none";
 authors.style.display = "none";
 
 //Page 5 step a and b??? 
-document.getElementById("btnDisplayListing").onclick = function myFunction() {
-    let choice = document.getElementById("favoriteList").value;
-//Page 5 steps e and f and g
-if (choice === "books") {
-    authors.style.display = "none",
-    books.style.display = "block"}
-else (choice === "authors") {
-    books.style.display = "none",
-    authors.style.display = "block"}
-else {books.style.display = "none",
-    authors.style.display = "none"};
+document.getElementById("btnDisplayListing").onclick = function() 
+{ 
+    let choice = document.getElementById("favoriteList").value; // gets value from input field
 
-}
+    //bind book object literals to HTML table
+    document.getElementById("txtMeTalkPrettyIsbn").innerHTML = book1.isbn;
 
-//bind book object literals to HTML table
-document.getElementById("txtMeTalkPrettyIsbn").innerHTML = 
-book1.isbn;
-document.getElementById("txtMeTalkPrettyTitle").innerHTML = 
-book1.title;
-document.getElementById("txtMeTalkPrettyPages").innerHTML = 
-book1.pages;
+    document.getElementById("txtMeTalkPrettyTitle").innerHTML = book1.title;
 
-document.getElementById("txtOutliersIsbn").innerHTML = 
-book2.isbn;
-document.getElementById("txtOutliersTitle").innerHTML = 
-book2.title;
-document.getElementById("txtOutliersPages").innerHTML = 
-book2.pages;
+    document.getElementById("txtMeTalkPrettyPages").innerHTML = book1.pages;
 
-document.getElementById("txtUsagiIsbn").innerHTML = 
-book3.isbn;
-document.getElementById("txtUsagiTitle").innerHTML = 
-book3.title;
-document.getElementById("txtUsagiPages").innerHTML = 
-book3.pages;
+    document.getElementById("txtOutliersIsbn").innerHTML = book2.isbn;
 
-//bind author object literals to HTML table
-document.getElementById("txtGladwellName").innerHTML = 
-author1.name;
-document.getElementById("txtGladwellGenre").innerHTML = 
-author1.genre;
+    document.getElementById("txtOutliersTitle").innerHTML = book2.title;
 
-document.getElementById("txtSedarisName").innerHTML = 
-author2.name;
-document.getElementById("txtSedarisGenre").innerHTML = 
-author2.genre;
+    document.getElementById("txtOutliersPages").innerHTML = book2.pages;
 
-document.getElementById("txtSakaiName").innerHTML = 
-author3.name;
-document.getElementById("txtSakaiGenre").innerHTML = 
-author3.genre;
+    document.getElementById("txtUsagiIsbn").innerHTML = book3.isbn;
 
-//Page 5 steps e and f and g
-if (choice === "books") {
-    authors.style.display = "none",
-    books.style.display = "block"}
-else (choice === "authors") {
-    books.style.display = "none",
-    authors.style.display = "block"}
-else {books.style.display = "none",
-    authors.style.display = "none"}
+    document.getElementById("txtUsagiTitle").innerHTML = book3.title;
 
+    document.getElementById("txtUsagiPages").innerHTML = book3.pages;
+
+    //bind author object literals to HTML table
+    document.getElementById("txtGladwellName").innerHTML = author1.name;
+
+    document.getElementById("txtGladwellGenre").innerHTML = author1.genre;
+
+    document.getElementById("txtSedarisName").innerHTML = author2.name;
+
+    document.getElementById("txtSedarisGenre").innerHTML = author2.genre;
+
+    document.getElementById("txtSakaiName").innerHTML = author3.name;
+
+    document.getElementById("txtSakaiGenre").innerHTML = author3.genre;
+
+    //Page 5 steps e and f and g
+    if (choice === "books") 
+    {
+        authors.style.display = "none";
+        books.style.display = "block";
+    } // end of if statement 
+    else if (choice === "authors") 
+    {
+        books.style.display = "none";
+        authors.style.display = "block";
+    } // end of else if
+    else 
+    {
+        books.style.display = "none";
+        authors.style.display = "none";
+    } // end else 
+} // end of onclick event
+    
 
 
 

@@ -30,12 +30,13 @@ h1 {
     margin: auto;
 }
 
-.table {
+table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 30px;
 }
-.th {
+
+table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
@@ -43,10 +44,10 @@ h1 {
     color: white;
     border: solid 1px #ddd;
 }
-.td {
+table td {
     border: solid 1px #ddd;
 }
-.tr:hover {
+table tr:hover {
     background-color: #D6A800;
     color: #4F3674;
     cursor: pointer;
