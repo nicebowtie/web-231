@@ -200,23 +200,17 @@
 */
 
 //create product class with constructor with 4 parameters
-class Product {
-    constructor(id, description, price, quantity, totalValue) {
+class Product 
+{
+    constructor(id, description, price, quantity) 
+    {
         this.id = id;
         this.description = description;
         this.price = price;
         this.quantity = quantity;
 
         //in body of the constructor add a fifth property totalValue
-        this.totalValue = totalValue.toFixed(2);
-    }
-        
-        //calculate total value
-        get totalValue() {
-        return this.calcTotalValue();
-        }
-        calcTotalValue() {
-        return this.quantity * this.price;
+        this.totalValue = (quantity * price).toFixed(2);
     }
 }
 
@@ -241,33 +235,33 @@ class Employee {
 }
 
 //Create 5 new Product objects and assign them to 5 separate variables.
-let Product1 = new Product(001, "Yo-yo with automatic return action", 14.95, 50, totalValue);
+let Product1 = new Product(1, "Yo-yo with automatic return action", 14.95, 50);
 
-let Product2 = new Product(002, "Magic Kit with 30 different tricks", 52.50, 14, totalValue);
+let Product2 = new Product(2, "Magic Kit with 30 different tricks", 52.50, 14);
 
-let Product3 = new Product(003, "Diablo juggling sticks", 39.95, 14, calcTotalValue);
+let Product3 = new Product(3, "Diablo juggling sticks", 39.95, 14);
 
-let Product4 = new Product(004, "Beginner's Unicycle", 115.75, 10, calcTotalValue);
+let Product4 = new Product(4, "Beginner's Unicycle", 115.75, 10);
 
-let Product5 = new Product(005, "Rolla Bolla Balance Board", 75.60, 12, calcTotalValue);
+let Product5 = new Product(5, "Rolla Bolla Balance Board", 75.60, 12);
 
 //Create 3 new Services objects and assign them to 3 separate variables.
-let Service1 = new Service(001, "Party Clown", 125);
+let Service1 = new Service(1, "Party Clown", 125, 3);
 
-let Service2 = new Service(002, "Fairytale Princess", 200, 2);
+let Service2 = new Service(2, "Fairytale Princess", 200, 2);
  
-let Service3 = new Service(003, "Living Statue", 175, 2);
+let Service3 = new Service(3, "Living Statue", 175, 2);
 
 //Create 5 new Employee objects and assign them to 5 separate variables.
-let Employee1 = new Employee(001, "Renee", "Roper" 13.54);
+let Employee1 = new Employee(1, "Renee", "Roper", 13.54);
 
-let Employee2 = new Employee(002, "Tamara", "Hall", 7.50);
+let Employee2 = new Employee(2, "Tamara", "Hall", 7.50);
     
-let Employee3 = new Employee(003, "Howie", "Gerhalt", 29.48);
+let Employee3 = new Employee(3, "Howie", "Gerhalt", 29.48);
     
-let Employee4 = new Employee(004, "Rob", "Lott", 30.31);
+let Employee4 = new Employee(4, "Rob", "Lott", 30.31);
 
-let Employee5 = new Employee(005, "David", "Moore", 18.75);
+let Employee5 = new Employee(5, "David", "Moore", 18.75);
 
 
 //using document.ElementById assign to variables products, services, employees.
@@ -405,11 +399,10 @@ document.getElementById("btnDisplayListing").onclick = function()
     document.getElementById("txtLottLastName").innerHTML = Employee5.lastName;
 
     document.getElementById("txtLottSalary").innerHTML = Employee5.salary;
-}
 
-    //Page 5 steps e and f and g
-    switch choice {
-    case 1:
+    switch(choice) 
+    {
+        case 1:
         choice === ("products");
         products.style.display = "block";
         services.style.display = "none";
@@ -428,13 +421,13 @@ document.getElementById("btnDisplayListing").onclick = function()
         employees.style.display = "block";
         break;
     default:
-        choice = "select";
+        choice = ("select");
         products.style.display = "none";
         services.style.display = "none";
         employees.style.display = "none";
         break;
-    }
-}
+    } // end of switch 
+} // end of onclick event 
 
 </script>
 </body>
