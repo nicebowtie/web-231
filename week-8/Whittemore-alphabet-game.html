@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<div lang="en">
+
+
+<!--
+============================================
+; Title: Assignment 8.2 The Alphabet Game
+; Author: Scott Whittemore
+; Date: 11 December 2022
+; Modified by: Scott Whittemore
+; Description: create alphabet game
+;===========================================
+-->
+
+<head>
+    <title>WEB 231 - Enterprise JavaScript I</title>
+    <link href="Whittemore-alphabet-game.css" type="text/css" rel="stylesheet">
+    <link href="../global.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<!--This is the card where you enter your chosen alphabet letter position-->
+<div id="container">
+    <h1 class="app-header">Welcome to the Alphabet Game!</h1>   
+
+    <!-- card start -->
+    <div class="card">
+        <div class="card-title">Alphabet Number Form</div>
+        <div class="card-content">
+            <div class="form">
+                <div class="form-field">
+                    <label for="txtMyNumber">Alphabet Letter Position</label>
+                    <input type="text" class="input" id="txtPosition">
+                </div>
+                <button id="btnFindLetter" class="btn btn-primary">Find Letter</button>
+            </div>
+        </div>
+        <!-- end of card content -->
+
+    </div>
+    <!-- end of card -->
+    
+    <a href="../index.html" class="return-home">Return</a>
+</div>
+<!-- end of container -->
+
+
+
+<!--This is the card that contains the letters in the alphabet-->
+    <div id="container">
+        <div class="card" id="favorite-books">
+            <div class="card-title">Letters in the Alphabet</div>
+                <div class="card-content" id="alphabetOutput">
+                    
+                </div>
+
+
+                
+            </div>
+        </div>
+    </div>
+
+<!--This is the results card-->              
+    <div id="container">
+        <div class="card"id="favorite-authors">
+            <div class="card-title">Results</div>
+                <div class="card-content" id="alphabet-letter"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+                          
+
+<script>
+    //array of all alphabet letters assigned to variable "alphabet"
+    const alphabet = [
+        alphabet[1] = "a", 
+        alphabet[2] = "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    
+    //string variable named "alphabetOutput" with value of an empty string
+    let alphabetOutput = "";
+    
+    let txt = "";
+
+    //use for/in loop to iterate over "alphabet" array and build string of letters of the alphabet
+    //with each letter separated by a comma. Use alphabetOutput variable to build the string.
+    for (let alphabetOutput in alphabet) {
+        txt += alphabet["alphabetOutput"] + "," + "<br>";
+    }
+
+    //bind alphabetOutput string to the alphabet div. Use slice() 
+    //to remove trailing comma from string if needed.
+    document.getElementById("alphabetOutput").innerHTML
+   
+    //register an onclick event for btnFindLetter
+    document.getElementById("btnFindLetter").onclick = document.getElementById("alphabet-letter").innerHTML
+
+    //capture entered value and bind it to variable named "pos"
+    let pos = document.getElementById("txtPosition").value
+
+    //find alphabet letter in array that matches entered 
+    //position and assign it to a variable named "letter"
+    let letter = alphabet????
+
+    //using if...else compare letter against undefined
+    if (letter < 1) {
+        pos = undefined;
+    }
+        else if (letter > 26) {    
+        pos = undefined;
+    }   else {
+    }
+
+    //if undefined bind the string value to the alphabet-letter div
+    if (pos = undefined) {
+        document.getElementById("alphabet-letter").innerHTML = "There are not <pos> letters in the alphabet"
+    }
+    //else bind the other string value to the alphabet-letter div
+        else {
+        document.getElementById("alphabet-letter").innerHTML = "<letter> is at position <pos> in the alphabet"
+        }
+
+
+    
+
+
+    
+    
+    </script>

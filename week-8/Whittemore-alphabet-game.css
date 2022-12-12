@@ -1,0 +1,24 @@
+/*
+============================================
+; Title: Exercise Assignment 8.2 - Alphabet Game
+; Author: Scott Whittemore
+; Date: 8 November 2022
+; Modified by: Scott Whittemore
+; Description: additonal css for assignment 8.2
+;===========================================
+*/
+
+/*center text and make font size 28px */
+.alphabetOutput {
+text-align: center;
+font-size: 28px;
+}
+
+.alphabet-letter {
+text-align: center;
+font-size: 28px;
+}
+
+.app-header {
+text-align: center;
+}
