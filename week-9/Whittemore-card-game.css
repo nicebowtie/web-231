@@ -1,0 +1,59 @@
+/*
+============================================
+; Title: Exercise Assignment 9.2 - Card Game
+; Author: Scott Whittemore
+; Date: 15 December 2022
+; Modified by: Scott Whittemore
+; Description: additonal css for assignment 8.2
+;===========================================
+*/
+
+.card-content {
+    font-size: 28px;
+    text-align: center;
+}
+/*I centered the <h1> to look more like the final solution*/
+h1 {
+    text-align: center;
+}
+.container {
+    padding: 10px;
+    width: 600px;
+    margin: 3% auto 0;   
+}
+
+/* I couldn't figure out how else to move the return link*/
+.return-home {
+    margin-left: 10px;
+}
+.card {
+    margin: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4F3674;
+    color: white;
+    border: solid 1px #ddd;
+}
+table td {
+    border: solid 1px #ddd;
+}
+table tr:hover {
+    background-color: #D6A800;
+    color: #4F3674;
+    cursor: pointer;
+}
+
+/* Add new CSS class named .player-card and center its text */
+.player-card {
+    text-align: center;
+}

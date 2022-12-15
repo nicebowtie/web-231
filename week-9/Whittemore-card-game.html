@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+============================================
+; Title: Assignment 9.2 Card Game
+; Author: Scott Whittemore
+; Date: 13 December 2022
+; Modified by: Scott Whittemore
+; Description: some card game thing
+;===========================================
+-->
+
+<head>
+    <title>WEB 231 - Enterprise JavaScript I</title>
+    <link href="Whittemore-card-game.css" type="text/css" rel="stylesheet">
+    <link href="../global.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+<npm install @mdi/font></npm>
+</head>
+
+<!--This is the card where you select which table you wish to display-->
+<div id="container">
+    <h1 class="app-header">Welcome to the Card Game!</h1>   
+
+    <!-- card start -->
+    <div class="card">
+        <div class="card-title">Card Dealer</div>
+            <div class="card-content">
+                <div class="form">
+                    <button id="btnDealCards" class="btn btn-primary">Deal Cards</button>
+                </div>
+            </div>
+
+    <!-- end of card content -->
+    </div>
+
+    <!-- end of card -->
+    <a href="../index.html" class="return-home">Return</a>
+</div>
+<!-- end of container -->
+
+
+
+
+   
+    
+    
+                          
+<script>
+
+/** Trying to have cards display playing cards
+ * selected at random
+*/
+
+//create Card class with constructor with parameters for face and suit
+class Card 
+{
+    constructor(face, suit)
+    {
+        this.face = face;
+        this.suit = suit;
+    }
+}
+
+//create a Dealer class with a constructor with no parameters
+class Dealer 
+{
+
+//create variable named CARD_COUNT and assign default value of 52
+ CARD_COUNT = 52;
+
+ //create variable named cards and assign default value of an empty array
+cards = [];
+
+//create variable named faces and assign array of the faces on a deck of cards
+faces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
+//create variable named suits and assign array of suits in a deck of cards
+suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
+
+//call getDeckOfCards function in body of class's constructor
+    constructor() 
+    {
+        
+    }
+
+    //create a function named getDeckOfCards with no parameters
+    getDeckofCards()
+    {
+
+//add a for loop with 52 iterations
+        for (let count = 0; count < this.CARD_COUNT; count++) 
+        {
+            //create new Card object and assign it to cards array with faces and suits expressions
+            this.cards[count] = new Card(this.faces[count % 13], this.suits[Math.floor(count / 13)]);
+        }
+
+    }
+//add a for loop with 52 iterations (use CARD_COUNT variable)
+    shuffle() 
+    {
+        for (let i = 0; i < this.CARD_COUNT; i++) 
+        {
+            let secondCard = Math.floor(Math.random() * this.CARD_COUNT);
+            let tempCard = this.cards[i];
+
+            this.cards[i] = this.cards[secondCard]
+            this.card[secondCard] = tempCard
+        }
+    }
+    
+}
+
+//Create a function named buildPlayingCard with four parameters: 
+//card, suitIcon, faceColor, and suitColor.
+function buildPlayingCard(card, suitIcon, faceColor, suitColor) 
+{
+    return `<div class="card player-card">
+                <div class="card-title" style="text-align: left; font-size: 20px; padding-left: 10px; color: ${faceColor}">${card.face}</div>
+                    <div class="card-content" style="font-size: 28px; padding-bottom: 25px;">
+                        <span class="${suitIcon}" style="color: ${suitColor}">
+                        </span>
+                    </div>
+            </div>`
+    
+}
+//end of function
+
+
+//Register an onclick event for btnDealCards
+document.getElementById("btnDealCards").onclick = function() {shuffle()};
+
+//Create a new Dealer object
+//Call the shuffle() function
+
+//create a string variable named cardOutputwithIcon give default value empty string.
+let cardOutputwithIcon = "";
+for 
+
+    let choice = document.getElementById("listing").value; // gets value from input field
+
+//bind Product objects to HTML table
+    document.getElementById("txtYoyoId").innerHTML = Product1.id;
+
+    document.getElementById("txtYoyoDescription").innerHTML = Product1.description;
+
+    document.getElementById("txtYoyoPrice").innerHTML = Product1.price;
+
+    document.getElementById("txtYoyoQuantity").innerHTML = Product1.quantity;
+
+    document.getElementById("txtYoyoTotalValue").innerHTML = Product1.totalValue;
+
+    document.getElementById("txtMagicId").innerHTML = Product2.id;
+
+    document.getElementById("txtMagicDescription").innerHTML = Product2.description;
+
+    document.getElementById("txtMagicPrice").innerHTML = Product2.price;
+
+    document.getElementById("txtMagicQuantity").innerHTML = Product2.quantity;
+
+    document.getElementById("txtMagicTotalValue").innerHTML = Product2.totalValue;
+
+    document.getElementById("txtDiabloId").innerHTML = Product3.id;
+
+    document.getElementById("txtDiabloDescription").innerHTML = Product3.description;
+
+    document.getElementById("txtDiabloPrice").innerHTML = Product3.price;
+
+    document.getElementById("txtDiabloQuantity").innerHTML = Product3.quantity;
+
+    document.getElementById("txtDiabloTotalValue").innerHTML = Product3.totalValue;
+
+    document.getElementById("txtUniId").innerHTML = Product4.id;
+
+    document.getElementById("txtUniDescription").innerHTML = Product4.description;
+
+    document.getElementById("txtUniPrice").innerHTML = Product4.price;
+
+    document.getElementById("txtUniQuantity").innerHTML = Product4.quantity;
+
+    document.getElementById("txtUniTotalValue").innerHTML = Product4.totalValue;
+
+    document.getElementById("txtRollaId").innerHTML = Product5.id;
+
+    document.getElementById("txtRollaDescription").innerHTML = Product5.description;
+
+    document.getElementById("txtRollaPrice").innerHTML = Product5.price;
+
+    document.getElementById("txtRollaQuantity").innerHTML = Product5.quantity;
+
+    document.getElementById("txtRollaTotalValue").innerHTML = Product5.totalValue;
+
+//Bind 3 services objects to HTML table
+    document.getElementById("txtClownId").innerHTML = Service1.id;
+
+    document.getElementById("txtClownDescription").innerHTML = Service1.description;
+
+    document.getElementById("txtClownHourlyRate").innerHTML = Service1.hourlyRate;
+
+    document.getElementById("txtClownMin").innerHTML = Service1.min;
+
+    document.getElementById("txtPrincessId").innerHTML = Service2.id;
+
+    document.getElementById("txtPrincessDescription").innerHTML = Service2.description;
+
+    document.getElementById("txtPrincessHourlyRate").innerHTML = Service2.hourlyRate;
+
+    document.getElementById("txtPrincessMin").innerHTML = Service2.min;
+
+    document.getElementById("txtStatueId").innerHTML = Service3.id;
+
+    document.getElementById("txtStatueDescription").innerHTML = Service3.description;
+
+    document.getElementById("txtStatueHourlyRate").innerHTML = Service3.hourlyRate;
+
+    document.getElementById("txtStatueMin").innerHTML = Service3.min;
+
+//Bind 5 Employee objects to an HTML table
+    document.getElementById("txtRoperId").innerHTML = Employee1.id;
+
+    document.getElementById("txtRoperFirstName").innerHTML = Employee1.firstName;
+
+    document.getElementById("txtRoperLastName").innerHTML = Employee1.lastName;
+
+    document.getElementById("txtRoperSalary").innerHTML = Employee1.salary;
+
+    document.getElementById("txtHallId").innerHTML = Employee2.id;
+
+    document.getElementById("txtHallFirstName").innerHTML = Employee2.firstName;
+
+    document.getElementById("txtHallLastName").innerHTML = Employee2.lastName;
+
+    document.getElementById("txtHallSalary").innerHTML = Employee2.salary;
+
+    document.getElementById("txtGerhaltId").innerHTML = Employee3.id;
+
+    document.getElementById("txtGerhaltFirstName").innerHTML = Employee3.firstName;
+
+    document.getElementById("txtGerhaltLastName").innerHTML = Employee3.lastName;
+
+    document.getElementById("txtGerhaltSalary").innerHTML = Employee3.salary;
+
+    document.getElementById("txtMooreId").innerHTML = Employee4.id;
+
+    document.getElementById("txtMooreFirstName").innerHTML = Employee4.firstName;
+
+    document.getElementById("txtMooreLastName").innerHTML = Employee4.lastName;
+
+    document.getElementById("txtMooreSalary").innerHTML = Employee4.salary;
+
+    document.getElementById("txtLottId").innerHTML = Employee5.id;
+
+    document.getElementById("txtLottFirstName").innerHTML = Employee5.firstName;
+
+    document.getElementById("txtLottLastName").innerHTML = Employee5.lastName;
+
+    document.getElementById("txtLottSalary").innerHTML = Employee5.salary;
+
+    switch(choice) 
+    {
+        case 1:
+        choice === ("products");
+        products.style.display = "block";
+        services.style.display = "none";
+        employees.style.display = "none";
+        break;
+    case 2:
+        choice === ("services");
+        products.style.display = "none";
+        services.style.display = "block";
+        employees.style.display = "none";
+        break;
+    case 3:
+        choice === ("employees");
+        products.style.display = "none";
+        services.style.display = "none";
+        employees.style.display = "block";
+        break;
+    default:
+        choice = ("select");
+        products.style.display = "none";
+        services.style.display = "none";
+        employees.style.display = "none";
+        break;
+    } // end of switch 
+} // end of onclick event 
+
+</script>
+</body>
+</html>
+
