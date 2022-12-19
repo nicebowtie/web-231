@@ -4,7 +4,7 @@
 ; Author: Scott Whittemore
 ; Date: 15 December 2022
 ; Modified by: Scott Whittemore
-; Description: additonal css for assignment 8.2
+; Description: additonal css for assignment 9.2
 ;===========================================
 */
 
@@ -53,7 +53,13 @@ table tr:hover {
     cursor: pointer;
 }
 
-/* Add new CSS class named .player-card and center its text */
+/* Add new CSS class named .player-card and center its text 
+/*set #player-card-container to a display of grid w/4 columns
+/*padding 10px, grid gap 10px */
 .player-card {
     text-align: center;
+    display: grid, 4;
+    padding: 10px;
+    grid-gap: 10px;
 }
+
